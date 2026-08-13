@@ -45,7 +45,6 @@ graph TD
     *   **Grouped Lags & Rolling Features**: 1-hour and 2-hour lags and 3-step rolling means/stds computed *per inverter* (`SOURCE_KEY`) to prevent cross-device data leakage.
     *   **Thermal Delta**: `temp_delta = temp_module - temp_ambient` to represent panel heating.
 *   **Models**:
-    *   **Stacking Ensemble Regressor**: Base estimators (Random Forest, XGBoost, and Gradient Boosting) combined via a Ridge Regression meta-model.
     *   **Prophet Model**: Time-series forecasting model mapping seasonality and daily production curves.
     *   **Target**: `actual_ratio` representing calibrated Performance Ratio (clipped to `[0, 1.2]`).
 
